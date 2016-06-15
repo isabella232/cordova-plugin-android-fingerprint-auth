@@ -78,7 +78,7 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
                         FingerprintAuth.packageName);
         getDialog().setTitle(getString(fingerprint_auth_dialog_title_id));
         int fingerprint_dialog_container_id = getResources()
-                .getIdentifier(useBackupOption ? "fingerprint_dialog_container" : "fingerprint_dialog_container", "layout",
+                .getIdentifier("fingerprint_dialog_container", "layout",
                         FingerprintAuth.packageName);
         View v = inflater.inflate(fingerprint_dialog_container_id, container, false);
         int cancel_button_id = getResources()
@@ -87,6 +87,7 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
         mCancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FingerprintAuth.onCancel();
                 dismiss();
             }
         });
