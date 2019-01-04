@@ -1,19 +1,33 @@
-#About
+![No longer maintained](https://img.shields.io/badge/Maintenance-OFF-red.svg)
+### [DEPRECATED] This repository is no longer maintained
+> While this project is fully functional, the dependencies are no longer up to date. You are still welcome to explore, learn, and use the code provided here.
+>
+> Modus is dedicated to supporting the community with innovative ideas, best-practice patterns, and inspiring open source solutions. Check out the latest [Modus Labs](https://labs.moduscreate.com?utm_source=github&utm_medium=readme&utm_campaign=deprecated) projects.
+
+[![Modus Labs](https://res.cloudinary.com/modus-labs/image/upload/h_80/v1531492623/labs/logo-black.png)](https://labs.moduscreate.com?utm_source=github&utm_medium=readme&utm_campaign=deprecated)
+
+---
+
+# About
 This plugin was created referencing the [Fingerprint Dialog sample](http://developer.android.com/samples/FingerprintDialog/index.html) and the [Confirm Credential sample](http://developer.android.com/samples/ConfirmCredential/index.html) referenced by the [Android 6.0 APIs webpage](http://developer.android.com/about/versions/marshmallow/android-6.0.html).
 
 This plugin will open a native dialog fragment prompting the user to authenticate using their fingerprint.  If the device has a secure lockscreen (pattern, PIN, or password), the user may opt to authenticate using that method as a backup.
 
-#Screenshots
-###Fingerprint Auth Dialog###
+# Screenshots
+
+### Fingerprint Auth Dialog
+
 ![Fingerprint Auth Dialog](screenshots/fp_auth_dialog.jpg) | ![Fingerprint Auth Dialog Success](screenshots/fp_auth_dialog_success.png) | ![Fingerprint Auth Dialog Fail](screenshots/fp_auth_dialog_fail.jpg) | ![Fingerprint Auth Dialog Too Many](screenshots/fp_auth_dialog_too_many.jpg) | ![Fingerprint Auth Dialog No Backup](screenshots/fp_auth_dialog_no_backup.jpg) | ![Fingerprint Auth Dialog No Backup](screenshots/fp_auth_dialog_longer.png)
-###Backup Credentials###
+
+### Backup Credentials
+
 ![Confirm Password](screenshots/confirm_creds_pw.png) | ![Confirm PIN](screenshots/confirm_creds_pin.png) | ![Confirm Pattern](screenshots/confirm_creds_pattern.png)
 
 
-#Installation
+# Installation
 `meteor add cordova:cordova-plugin-android-fingerprint-auth`
 
-#Setup
+# Setup
 Add preference to mobile-config.js
 ```
 App.setPreference('android-targetSdkVersion', '23');
@@ -25,8 +39,8 @@ compileSdkVersion 23
 buildToolsVersion "23.0.2"
 ```
 
-#API
-###FingerprintAuth.show###
+# API
+### FingerprintAuth.show
 ```
 FingerprintAuth.show({
             clientId: "myAppName",
@@ -56,7 +70,7 @@ registered for the device.
 `clientId` will be used as the alias for your key in the Android Key Store.
 `clientSecret` will be used to encrypt the token returned upon successful fingerprint authentication.
 
-###FingerprintAuth.isAvailable###
+### FingerprintAuth.isAvailable
 ```
 FingerprintAuth.isAvailable(isAvailableSuccess, isAvailableError);
 
